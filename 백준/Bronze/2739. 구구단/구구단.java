@@ -11,6 +11,7 @@ public class Main {
 			System.out.println(n + " * " + i + " = " + (n * i));
 		}
 		
+		sc.close();
 	}
 
 }
