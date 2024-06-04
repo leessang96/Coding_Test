@@ -10,12 +10,17 @@ public class Main {
 		for(int i=0; i<t; i++) {
 			int a = sc.nextInt();
 			int b = sc.nextInt();
-		
-			System.out.println(a+b);
+			
+			add(a, b);
 			
 		}
 		
+		sc.close();
 		
+	}
+	
+	public static void add(int a, int b) {
+		System.out.println(a+b);
 	}
 
 }
