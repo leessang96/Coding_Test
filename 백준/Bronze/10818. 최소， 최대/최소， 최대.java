@@ -1,38 +1,41 @@
 import java.io.*;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
 public class Main {
 
 	public static void main(String[] args) throws IOException {
 	
-		Scanner sc = new Scanner(System.in);
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 		
-		int n = sc.nextInt();
+		int n = Integer.parseInt(br.readLine());
 		int[] a = new int[n];
 		
-		int max = Integer.MIN_VALUE;
-		int min = Integer.MAX_VALUE;
-		
+		StringTokenizer st = new StringTokenizer(br.readLine());
 		
 		for(int i=0; i<n; i++) {
-			a[i] = sc.nextInt();
+			a[i] = Integer.parseInt(st.nextToken());
 		}
 
+		int max = a[0];
+		int min = a[0];
+		
 		for(int i=0; i<a.length; i++) {
 			if(max < a[i]) {
 				max = a[i];
 			}
-			
 			if(min > a[i]) {
 				min = a[i];
 			}
-			
 		}
 		
-		System.out.println(min + " " + max);
+		bw.write(min + " " + max);
 		
-		
+		bw.flush();
+		br.close();
+		bw.close();
 	}
 
+	
+	
 }
