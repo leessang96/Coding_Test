@@ -7,15 +7,9 @@ public class Main {
         String word = sc.nextLine();
 
         int answer = 0;
-        int s = 0;
-        while(true){
-            int findIndex = doc.indexOf(word, s);
-            if(findIndex < 0){
-                break;
-            }
-            answer++;
-            s = findIndex + word.length();
-        }
+        String replaced = doc.replace(word, "");
+        int len = doc.length() - replaced.length();
+        answer = len / word.length();
 
         System.out.println(answer);
 
